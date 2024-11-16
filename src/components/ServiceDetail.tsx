@@ -298,7 +298,7 @@ export const ServiceDetail = () => {
               <h2 className="text-xl font-bold mb-6">立即咨询</h2>
               <div className="text-center">
                 <img
-                  src="https://placehold.co/300x300/png?text=WeChat+QR"
+                  src= "/二维码.jpg" 
                   alt="微信咨询二维码"
                   className="w-48 h-48 mx-auto rounded-lg mb-4"
                 />
