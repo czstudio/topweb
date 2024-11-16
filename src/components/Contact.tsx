@@ -45,21 +45,21 @@ export const Contact = () => {
                 <MapPin className="w-6 h-6" />
                 <div>
                   <h3 className="text-xl font-semibold mb-2">地址</h3>
-                  <p className="opacity-90">北京市朝阳区酒仙桥北路2号楼</p>
+                  <p className="opacity-90">xxxxxxxxx</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-6 h-6" />
                 <div>
                   <h3 className="text-xl font-semibold mb-2">电话</h3>
-                  <p className="opacity-90">187-1149-3387</p>
+                  <p className="opacity-90">xxxxxxxxxx</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-6 h-6" />
                 <div>
                   <h3 className="text-xl font-semibold mb-2">商务合作</h3>
-                  <p className="opacity-90">business@tulingxueshu.com</p>
+                  <p className="opacity-90">xxxxxxx</p>
                 </div>
               </div>
             </motion.div>
@@ -78,7 +78,7 @@ export const Contact = () => {
                 </h2>
                 <div className="bg-white p-4 rounded-xl shadow-lg">
                   <img
-                    src="https://placehold.co/300x300/png?text=小程序"
+                    src="/二维码.jpg"
                     alt="官方小程序二维码"
                     className="w-full rounded-lg"
                   />
@@ -94,7 +94,7 @@ export const Contact = () => {
                 </h2>
                 <div className="bg-white p-4 rounded-xl shadow-lg">
                   <img
-                    src="https://placehold.co/300x300/png?text=微信"
+                    src="/二维码.jpg"
                     alt="微信咨询二维码"
                     className="w-full rounded-lg"
                   />

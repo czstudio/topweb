@@ -36,6 +36,8 @@ export const Cases = () => {
 
   const viewCaseDetails = (caseId: string) => {
     navigate(`/case/${caseId}`);
+    // 添加平滑滚动到顶部
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -78,7 +80,7 @@ export const Cases = () => {
                     {item.category === "学术成果" && <Clock className="w-4 h-4" />}
                     {item.category}
                   </span>
-                  <h3 className="text-xl font-bold mt-2">{item.title}</h3>
+                  <h3 className="text-xl font-bold mt-2 text-shadow-sm">{item.title}</h3>
                 </div>
               </div>
               
@@ -86,7 +88,7 @@ export const Cases = () => {
                 <p className="text-gray-600 mb-4 line-clamp-2">{item.background.content}</p>
                 <div className="grid grid-cols-3 gap-4 mb-4">
                   {Object.entries(item.stats).map(([key, value], idx) => (
-                    <div key={idx} className="text-center p-2 bg-blue-50 rounded-lg">
+                    <div key={idx} className="text-center p-2 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
                       <div className="text-blue-600 font-bold">{value}</div>
                       <div className="text-sm text-gray-500">{key}</div>
                     </div>

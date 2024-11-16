@@ -65,7 +65,7 @@ export const Hero = () => {
             {/* 移动端 */}
             <source
               media="(max-width: 640px)"
-              srcSet="/hero-mobile.avif"
+              srcSet="/hero-mobile.webp"
               type="image/avif"
             />
             <source
@@ -76,7 +76,7 @@ export const Hero = () => {
             {/* 平板 */}
             <source
               media="(max-width: 1024px)"
-              srcSet="/hero-tablet.avif"
+              srcSet="/hero-tablet.webp"
               type="image/avif"
             />
             <source
@@ -95,7 +95,7 @@ export const Hero = () => {
             />
             {/* 后备图片 */}
             <img 
-              src="/hero-desktop.jpg"
+              src="/hero-desktop.avif"
               alt="AI Technology Background"
               className="w-full h-full object-cover"
               style={{ opacity: imageLoaded ? 1 : 0 }}
@@ -149,8 +149,8 @@ export const Hero = () => {
           {[
             { number: "50+", label: "顶尖导师" },
             { number: "200+", label: "成功案例" },
-            { number: "98%", label: "学生好评" },
-            { number: "100+", label: "合作机构" }
+            { number: "100%", label: "学生好评" },
+            { number: "30+", label: "合作机构" }
           ].map((stat, index) => (
             <div key={index} className="text-center backdrop-blur-sm bg-white/5 rounded-lg p-4 border border-white/10">
               <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">

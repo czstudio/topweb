@@ -1,8 +1,29 @@
 import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const quickLinks = [
+    { label: "关于我们", path: "/about" },
+    { label: "服务项目", path: "/services" },
+    { label: "成功案例", path: "/cases" },
+    { label: "导师团队", path: "/team" }
+  ];
+
+  const serviceLinks = [
+    { label: "科研辅导", path: "/service/paper-writing" },
+    { label: "论文指导", path: "/service/code-development" },
+    { label: "留学咨询", path: "/service/study-abroad" },
+    { label: "职业规划", path: "/service/graduate-exam" }
+  ];
+
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="container mx-auto px-4 py-12">
@@ -17,33 +38,47 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">快速链接</h4>
             <ul className="space-y-2">
-              <li><Link to="/about" className="hover:text-blue-400 transition-colors">关于我们</Link></li>
-              <li><Link to="/services" className="hover:text-blue-400 transition-colors">服务项目</Link></li>
-              <li><Link to="/cases" className="hover:text-blue-400 transition-colors">成功案例</Link></li>
-              <li><Link to="/team" className="hover:text-blue-400 transition-colors">加入我们</Link></li>
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <button
+                    onClick={() => handleNavigation(link.path)}
+                    className="hover:text-blue-400 transition-colors"
+                  >
+                    {link.label}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
           
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">服务项目</h4>
             <ul className="space-y-2">
-              <li><Link to="/service/paper-writing" className="hover:text-blue-400 transition-colors">科研辅导</Link></li>
-              <li><Link to="/service/code-development" className="hover:text-blue-400 transition-colors">论文指导</Link></li>
-              <li><Link to="/service/study-abroad" className="hover:text-blue-400 transition-colors">留学咨询</Link></li>
-              <li><Link to="/service/graduate-exam" className="hover:text-blue-400 transition-colors">职业规划</Link></li>
+              {serviceLinks.map((link, index) => (
+                <li key={index}>
+                  <button
+                    onClick={() => handleNavigation(link.path)}
+                    className="hover:text-blue-400 transition-colors"
+                  >
+                    {link.label}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
           
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">联系方式</h4>
             <ul className="space-y-3">
-              <li className="flex items-center gap-2">
+              <li className="flex items-center gap-2 hover:text-blue-400 transition-colors">
                 <Mail className="w-5 h-5" />
-                <span>contact@topology-academic.com</span>
+                <a href="mailto:contact@topology-academic.com">
+                  contact@topology-academic.com
+                </a>
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-center gap-2 hover:text-blue-400 transition-colors">
                 <Phone className="w-5 h-5" />
-                <span>400-XXX-XXXX</span>
+                <a href="tel:400-XXX-XXXX">400-XXX-XXXX</a>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="w-5 h-5" />
@@ -53,10 +88,26 @@ export const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-sm">
-            © {new Date().getFullYear()} 拓扑学术. All rights reserved.
-          </p>
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm">
+              © {new Date().getFullYear()} 拓扑学术. All rights reserved.
+            </p>
+            <div className="flex gap-4">
+              <button
+                onClick={() => handleNavigation('/privacy')}
+                className="text-sm hover:text-blue-400 transition-colors"
+              >
+                隐私政策
+              </button>
+              <button
+                onClick={() => handleNavigation('/terms')}
+                className="text-sm hover:text-blue-400 transition-colors"
+              >
+                服务条款
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

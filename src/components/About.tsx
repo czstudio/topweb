@@ -34,7 +34,7 @@ export const About = () => {
     {
       icon: <Award className="w-8 h-8 text-blue-600" />,
       title: "顶尖师资团队",
-      description: "汇聚北大、清华等顶尖高校博士团队，提供专业学术指导"
+      description: "汇聚清华、港科大、CMU等顶尖高校博士团队，提供专业学术指导"
     },
     {
       icon: <BookOpen className="w-8 h-8 text-blue-600" />,
@@ -44,7 +44,7 @@ export const About = () => {
     {
       icon: <Users className="w-8 h-8 text-blue-600" />,
       title: "优质校友资源",
-      description: "依托北大校友网络，助力学术发展与职业规划"
+      description: "依托清华复旦港大校友网络，助力学术发展与职业规划"
     },
     {
       icon: <Globe className="w-8 h-8 text-blue-600" />,
@@ -61,18 +61,18 @@ export const About = () => {
     },
     {
       icon: <Star className="w-6 h-6 text-blue-600" />,
-      title: "一对一辅导",
+      title: "一对一和小班辅导",
       description: "针对性解答学术难题，深入理解课程内容"
     },
     {
       icon: <Briefcase className="w-6 h-6 text-blue-600" />,
-      title: "实习内推",
-      description: "推荐顶尖科技公司实习机会"
+      title: "实习RA内推",
+      description: "推荐顶尖科技公司和实验室实习机会"
     },
     {
       icon: <GraduationCap className="w-6 h-6 text-blue-600" />,
       title: "留学申请服务",
-      description: "提供全面的留学申请指导和文书服务"
+      description: "提供全面的一条龙留学申请指导和文书包过服务"
     }
   ];
 
@@ -91,7 +91,7 @@ export const About = () => {
         >
           <h2 className="text-3xl font-bold mb-4">关于我们</h2>
           <p className="text-gray-600">
-            拓扑学术是一家专注于AI领域的高端科研教育服务提供商，由北大校友及海外博士团队创立，致力于培养国际一流的AI人才。
+            拓扑学术是一家专注于AI领域的高端科研教育服务提供商，由清华校友及海外博士团队创立，致力于培养国际一流的AI人才。
           </p>
         </motion.div>
 
