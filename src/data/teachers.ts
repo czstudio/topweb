@@ -85,7 +85,7 @@ export const teachers: Record<string, TeacherData> = {
     title: "推荐系统专家",
     university: "昆士兰大学",
     field: "推荐系统 / NLP",
-    image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=600",
+    image: "https://images.unsplash.com/photo-1580518337843-f959e992563b?auto=format&fit=crop&q=80&w=600",
     description: "昆士兰大学博士，专注推荐系统与NLP研究，20+篇SCI论文发表经验。",
     longDescription: `Mike老师是昆士兰大学计算机科学博士。他在推荐系统，自然语言处理、检索增强生成，大模型智能体，问答系统，搜索引擎等等多个前沿领域拥有深厚的研究背景。`,
     achievements: [
@@ -154,7 +154,7 @@ export const teachers: Record<string, TeacherData> = {
   title: "LLM研究专家",
   university: "麻省理工学院",
   field: "大语言模型 / 知识图谱",
-  image: "/avatars/teacher-david.svg", // 新的卡通头像
+  image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&q=80&w=600",
   description: "MIT博士，专注于大语言模型和知识图谱研究，前OpenAI研究员。",
   longDescription: `David老师是麻省理工学院计算机科学博士，曾在OpenAI担任研究科学家。他的研究重点是大语言模型的可解释性、知识注入和效率优化。他开发的知识增强型语言模型框架被广泛应用于学术界和工业界。同时，他在模型压缩和量化方面也有深入研究。`,
   achievements: [
@@ -194,7 +194,7 @@ export const teachers: Record<string, TeacherData> = {
     title: "通用大模型研究专家",
     university: "牛津大学",
     field: "通用大模型预训练及迁移",
-    image: "/avatars/teacher-james.svg", // 新的卡通头像
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600",
     description: "牛津大学计算机科学博士在读，专注于通用大模型的预训练和迁移研究，曾任商汤科技算法研究员。",
     longDescription: `James 老师目前是牛津大学计算机科学系的博士研究生，研究方向集中在通用视觉大模型的预训练及其在不同任务中的迁移应用。他曾任商汤科技算法研究员，期间积累了丰富的工业界实践经验。James 老师在计算机视觉领域取得了显著成就，以第一作者身份发表了多篇高水平论文，包括CVPR、ICCV、ECCV、AAAI、IJCAI 和 ICLR 等顶级会议。此外，他还曾获得CVPR Oral（录取率3%）和某CCFA类会议Best Paper Final List（录取率0.1%）。`,
     achievements: [
