@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin } from 'lucide-react';
 
 export const Contact = () => {
   return (
@@ -32,35 +31,6 @@ export const Contact = () => {
                 >
                   立即咨询
                 </motion.button>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="mt-16 space-y-6"
-            >
-              <div className="flex items-center gap-3">
-                <MapPin className="w-6 h-6" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">地址</h3>
-                  <p className="opacity-90">xxxxxxxxx</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="w-6 h-6" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">电话</h3>
-                  <p className="opacity-90">xxxxxxxxxx</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="w-6 h-6" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">商务合作</h3>
-                  <p className="opacity-90">xxxxxxx</p>
-                </div>
               </div>
             </motion.div>
           </motion.div>

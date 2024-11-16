@@ -1,6 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const Footer = () => {
   const navigate = useNavigate();
@@ -27,7 +26,7 @@ export const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold text-white mb-4">拓扑学术</h3>
             <p className="text-sm">
@@ -64,26 +63,6 @@ export const Footer = () => {
                   </button>
                 </li>
               ))}
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">联系方式</h4>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-2 hover:text-blue-400 transition-colors">
-                <Mail className="w-5 h-5" />
-                <a href="mailto:contact@topology-academic.com">
-                  contact@topology-academic.com
-                </a>
-              </li>
-              <li className="flex items-center gap-2 hover:text-blue-400 transition-colors">
-                <Phone className="w-5 h-5" />
-                <a href="tel:400-XXX-XXXX">400-XXX-XXXX</a>
-              </li>
-              <li className="flex items-center gap-2">
-                <MapPin className="w-5 h-5" />
-                <span>北京市海淀区</span>
-              </li>
             </ul>
           </div>
         </div>

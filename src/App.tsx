@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -13,57 +13,65 @@ import { TeacherDetail } from './components/TeacherDetail';
 import { CaseDetail } from './components/CaseDetail';
 import { ServiceDetail } from './components/ServiceDetail';
 
-// 创建一个滚动到顶部的组件
-const ScrollToTop = () => {
+// Wrapper component that handles scroll behavior and animations
+const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
-  
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [location.pathname]); // 当路径改变时触发滚动
-  
-  return null;
-};
+  }, [location.pathname]);
 
-const PageWrapper = ({ children }: { children: React.ReactNode }) => (
-  <div className="pt-16 min-h-screen bg-gray-50">
-    {children}
-  </div>
-);
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.3 }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 const HomePage = () => (
   <>
     <Hero />
-    <About />
     <Services />
-    <Team />
     <Cases />
+    <Team />
     <Contact />
   </>
 );
 
 function App() {
+  const location = useLocation();
+
   return (
-    <Router>
-      <ScrollToTop /> {/* 添加滚动控制组件 */}
-      <div className="min-h-screen bg-white">
-        <Navbar />
-        <AnimatePresence mode="wait">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
-            <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
-            <Route path="/service/:id" element={<PageWrapper><ServiceDetail /></PageWrapper>} />
-            <Route path="/team" element={<PageWrapper><Team /></PageWrapper>} />
-            <Route path="/teacher/:id" element={<PageWrapper><TeacherDetail /></PageWrapper>} />
-            <Route path="/cases" element={<PageWrapper><Cases /></PageWrapper>} />
-            <Route path="/case/:id" element={<PageWrapper><CaseDetail /></PageWrapper>} />
-            <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
-          </Routes>
-        </AnimatePresence>
-        <Footer />
-      </div>
-    </Router>
+    <>
+      <Navbar />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<PageWrapper><HomePage /></PageWrapper>} />
+          <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
+          <Route path="/services" element={<PageWrapper><Services /></PageWrapper>} />
+          <Route path="/service/:id" element={<PageWrapper><ServiceDetail /></PageWrapper>} />
+          <Route path="/team" element={<PageWrapper><Team /></PageWrapper>} />
+          <Route path="/teacher/:id" element={<PageWrapper><TeacherDetail /></PageWrapper>} />
+          <Route path="/cases" element={<PageWrapper><Cases /></PageWrapper>} />
+          <Route path="/case/:id" element={<PageWrapper><CaseDetail /></PageWrapper>} />
+          <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+        </Routes>
+      </AnimatePresence>
+      <Footer />
+    </>
   );
 }
 
-export default App;
+// Wrap the App component with Router
+const AppWrapper = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default AppWrapper;

@@ -230,5 +230,48 @@ export const teachers: Record<string, TeacherData> = {
       "AAAI 2022: Interpretable Computer Vision Models",
       "IJCAI 2021: Deep Learning for Video Analysis"
     ]
+  },
+
+
+  'leonard-teacher': {
+    name: "Leonard老师",
+    title: "AI安全与隐私专家",
+    university: "QS世界前20大学",
+    field: "AI安全 / 隐私计算",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=600",
+    description: "华五计算机本博，QS前20大学博后，专注AI安全与隐私研究，20+顶会论文发表。",
+    longDescription: `Leonard老师是华五计算机本博，现在QS世界前20大学担任博后研究员，研究方向为AI安全与隐私。他在Trustworthy AI、AI for Security & Privacy等多个前沿领域拥有深厚的研究背景。迄今已在IEEE S&P、ACM CCS、USENIX Security、NDSS、CVPR、EMNLP等顶级会议发表20+篇论文，并获得10+项专利授权。`,
+    achievements: [
+      "20+篇顶会论文发表",
+      "10+项专利授权",
+      "多个顶会审稿人",
+      "6篇A会/A刊指导成果"
+    ],
+    stats: {
+      papers: "20+",
+      citations: "3000+",
+      experience: "5年+",
+      students: "15+"
+    },
+    researchAreas: [
+      "多模态大模型安全",
+      "LLM智能体安全",
+      "大模型内容合规",
+      "系统异常检测",
+      "恶意程序分析",
+      "通信规范分析"
+    ],
+    teachingStyle: [
+      "理论实践结合",
+      "系统科研规划",
+      "个性化指导",
+      "团队协作培养"
+    ],
+    publications: [
+      "IEEE S&P 2024: AI Security & Privacy",
+      "ACM CCS 2023: LLM Agent Security",
+      "USENIX Security 2023: System Security",
+      "CVPR 2023: Multimodal AI Safety"
+    ]
   }
 };
