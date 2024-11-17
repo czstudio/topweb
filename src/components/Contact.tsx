@@ -35,7 +35,7 @@ export const Contact = () => {
               </div>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -45,24 +45,24 @@ export const Contact = () => {
                 <MapPin className="w-6 h-6" />
                 <div>
                   <h3 className="text-xl font-semibold mb-2">地址</h3>
-                  <p className="opacity-90">xxxxxxxxx</p>
+                  <p className="opacity-90">北京市海淀区</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-6 h-6" />
                 <div>
                   <h3 className="text-xl font-semibold mb-2">电话</h3>
-                  <p className="opacity-90">xxxxxxxxxx</p>
+                  <p className="opacity-90">400-XXX-XXXX</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-6 h-6" />
                 <div>
                   <h3 className="text-xl font-semibold mb-2">商务合作</h3>
-                  <p className="opacity-90">xxxxxxx</p>
+                  <p className="opacity-90">contact@topology-academic.com</p>
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           <motion.div
