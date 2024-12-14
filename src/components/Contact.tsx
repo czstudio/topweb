@@ -23,7 +23,7 @@ export const Contact = () => {
               </h1>
               <div className="space-y-6 text-lg">
                 <p className="opacity-90 [text-shadow:_0_1px_1px_rgb(0_0_0_/_10%)]">
-                  我们的专业导师团队随时准备为您提��一对一的咨询服务，解答您的所有疑问。
+                  我们的专业导师团队随时准备为您提供一对一的咨询服务，解答您的所有疑问。
                 </p>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
